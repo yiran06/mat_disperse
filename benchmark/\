@@ -1,0 +1,22 @@
+#!/usr/bin/python
+
+import sys
+import re
+
+def search_der(file):
+    f = open(file)
+    lines = f.read()
+    f.close()
+    for i, line in enumerate(lines, 1):
+        if 'LAYER' in line:
+            print i
+
+
+
+def main():
+    files=['SRDER.TXT','SLDER.TXT']
+    for file in files:
+        search_der(file)
+
+if __name__=='__main__':
+    main()
